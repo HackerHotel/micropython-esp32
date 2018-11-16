@@ -164,6 +164,7 @@ def list_categories():
 	try:
 		categories
 	except:
+		ugfx.init()
 		ugfx.input_init()
 		draw_msg('Getting categories')
 		try:

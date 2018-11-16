@@ -165,7 +165,7 @@ SRC_C = \
 	modfreedomgfx.c \
 	modfreedomgfx_sdl.c \
 	modnetwork.c \
-	modbadge.c \
+	mock_badge.c \
 	../../ugfx/drivers/multiple/SDL/gdisp_lld_SDL.c \
 	ginput_lld_toggle.c \
 	../../components/sha2017/wildcard_sha2017_org.c \

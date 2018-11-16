@@ -177,7 +177,6 @@ extern const struct _mp_obj_module_t mp_module_socket;
 extern const struct _mp_obj_module_t mp_module_ffi;
 extern const struct _mp_obj_module_t mp_module_jni;
 extern const struct _mp_obj_module_t mock_esp_network_module;
-extern const struct _mp_obj_module_t mock_badge_module;
 extern const struct _mp_obj_module_t ugfx_module;
 extern const struct _mp_obj_module_t freedomgfx_module;
 
@@ -230,7 +229,6 @@ extern const struct _mp_obj_module_t freedomgfx_module;
     { MP_OBJ_NEW_QSTR(MP_QSTR_ugfx), (mp_obj_t)&ugfx_module }, \
     { MP_OBJ_NEW_QSTR(MP_QSTR_freedomgfx), (mp_obj_t)&freedomgfx_module }, \
     { MP_OBJ_NEW_QSTR(MP_QSTR_network), (mp_obj_t)&mock_esp_network_module }, \
-    { MP_OBJ_NEW_QSTR(MP_QSTR_badge), (mp_obj_t)&mock_badge_module }, \
 
 #define MICROPY_MODULE_WEAK_LINKS (1)
 #define MICROPY_PORT_BUILTIN_MODULE_WEAK_LINKS \

@@ -159,6 +159,7 @@ def init_power_management():
 
 # Main application
 def start():
+    ugfx.init()
     ugfx.input_init()
     ugfx.set_lut(ugfx.LUT_FASTER)
     ugfx.clear(ugfx.WHITE)
