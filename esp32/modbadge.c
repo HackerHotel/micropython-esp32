@@ -40,6 +40,7 @@
 
 #include "badge_i2c.h"
 #include "badge_mpr121.h"
+#include "badge_input.h"
 
 #include "py/mperrno.h"
 #include "py/mphal.h"
@@ -753,6 +754,12 @@ STATIC mp_obj_t badge_mount_bpp() {
 }
 STATIC MP_DEFINE_CONST_FUN_OBJ_0(badge_mount_bpp_obj, badge_mount_bpp);
 
+STATIC mp_obj_t badge_read_input(mp_obj_t timeout_obj) {
+	int timeout = mp_obj_get_int(timeout_obj);
+	return mp_obj_new_int(badge_input_get_event(timeout));
+}
+
+STATIC MP_DEFINE_CONST_FUN_OBJ_1(badge_read_input_obj, badge_read_input);
 
 // Module globals
 
@@ -826,6 +833,8 @@ STATIC const mp_rom_map_elem_t badge_module_globals_table[] = {
     {MP_OBJ_NEW_QSTR(MP_QSTR_mount_bpp), (mp_obj_t)&badge_mount_bpp_obj},
 
     {MP_OBJ_NEW_QSTR(MP_QSTR_safe_mode), (mp_obj_t)&badge_safe_mode_obj},
+    
+    {MP_OBJ_NEW_QSTR(MP_QSTR_read_input), (mp_obj_t)&badge_read_input_obj},
 
 };
 
